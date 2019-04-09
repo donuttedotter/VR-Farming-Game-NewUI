@@ -18,6 +18,6 @@ public class DisplayCornNum : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cornNumDisplay.text = "Corn: " + cornNum;
+        cornNumDisplay.text = "Crops: " + cornNum;
     }
 }
