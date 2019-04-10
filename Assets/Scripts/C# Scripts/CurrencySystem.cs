@@ -7,6 +7,7 @@ public class CurrencySystem : MonoBehaviour
 {
     public static int currentMoney; //current amount held by user
     Text money;
+    public GameObject notEnoughMoney;
     // Start is called before the first frame update
     void Start()
     {   
@@ -34,6 +35,7 @@ public class CurrencySystem : MonoBehaviour
         {
             //display message stating that user does not have enough money
             Debug.Log("Not enough money available to purchase that!");
+            notEnoughMoney.SetActive(true);
             return false;
         }
         else
@@ -44,5 +46,10 @@ public class CurrencySystem : MonoBehaviour
 
             return true;
         }
+    }
+
+    public int getMoney()
+    {
+        return currentMoney;
     }
 }
